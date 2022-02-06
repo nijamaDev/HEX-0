@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="player.svg"
+   inkscape:export-filename="/home/kiin/ztorage/grive/U/IS/S6/Videojuegos/HEX-0/player.png"
+   inkscape:export-xdpi="116.34446"
+   inkscape:export-ydpi="116.34446"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2"
+     inkscape:cx="361.25"
+     inkscape:cy="434.5"
+     inkscape:window-width="2560"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3376">
+      <circle
+         style="fill:#ffa8c9;fill-opacity:1;fill-rule:evenodd;stroke-width:0.253864"
+         id="path319"
+         cx="105.66551"
+         cy="108.95952"
+         r="24.928194" />
+      <path
+         style="fill:#ffa8c9;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 105.63048,149.5265 19.89254,-25.49564 -39.733756,-0.0257 z"
+         id="path1375"
+         sodipodi:nodetypes="cccc" />
+    </g>
+  </g>
+</svg>
