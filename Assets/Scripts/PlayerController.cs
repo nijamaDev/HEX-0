@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
   public float turnSpeed;
   public float moveSpeed;
   Rigidbody2D rb;
+  public GameObject shooting;
+  public float distancia;
   // Start is called before the first frame update
   void Start()
   {
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+
     // Get world position for the mouse
     mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     // Get the direction of the mouse relative to the player and rotate the player to said direction
@@ -33,11 +36,12 @@ public class PlayerController : MonoBehaviour
 
     if (Input.GetKeyDown(KeyCode.Mouse0))
     {
-      // Debug.Log("Fire!");
+      Instantiate(shooting, transform.position, transform.rotation);
     }
     if (Input.GetKey(KeyCode.Mouse1))
     {
       rb.AddForce(-(Vector2)transform.up * moveSpeed * Time.deltaTime);
     }
   }
+
 }
