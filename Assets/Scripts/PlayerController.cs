@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
   Rigidbody2D rb;
   public Rigidbody2D projectile;
   public float bulletSpeed;
+  public Transform playerLight;
   // Start is called before the first frame update
   void Start()
   {
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour
     {
       rb.AddForce(-(Vector2)transform.up * moveSpeed * Time.deltaTime);
     }
+    playerLight.transform.position = transform.position;
   }
 
 }
