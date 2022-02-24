@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
   public float turnSpeed;
   public float moveSpeed;
   Rigidbody2D rb;
-  public GameObject shooting;
-  public float distancia;
+  public Rigidbody2D projectile;
+  public float bulletSpeed;
   // Start is called before the first frame update
   void Start()
   {
@@ -36,7 +36,8 @@ public class PlayerController : MonoBehaviour
 
     if (Input.GetKeyDown(KeyCode.Mouse0))
     {
-      Instantiate(shooting, transform.position, transform.rotation);
+      Rigidbody2D bullet = Instantiate(projectile, transform.position, transform.rotation);
+      bullet.velocity = rb.velocity + ((Vector2)transform.up * -bulletSpeed);
     }
     if (Input.GetKey(KeyCode.Mouse1))
     {
