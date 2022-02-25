@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
   public Rigidbody2D projectile;
   public float bulletSpeed;
   public Transform playerLight;
+  public Light2D lt;
   // Start is called before the first frame update
   void Start()
   {
@@ -45,6 +47,7 @@ public class PlayerController : MonoBehaviour
       rb.AddForce(-(Vector2)transform.up * moveSpeed * Time.deltaTime);
     }
     playerLight.transform.position = transform.position;
+    lt.intensity = 0.7f + Mathf.PingPong(Time.time / 8, 0.3f);
   }
 
 }
