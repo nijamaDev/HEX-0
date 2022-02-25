@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class count : MonoBehaviour
 {
   int contador;
-  public Text puntos;
+  public TMP_Text puntos;
   Rigidbody2D rb;
   private void OnTriggerEnter2D(Collider2D other)
   {
