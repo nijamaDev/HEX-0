@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class SpawnerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    float timer;
+    public GameObject enemyPrefab;
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        timer += Time.deltaTime;
+
+        if(timer >= 5)
+        {
+            timer = 0;
+            float posXGenerator = Random.Range(-3.5f, 3.5f);
+            float posYGenerator = Random.Range(-3.5f, 3.5f);
+            Vector3 pos = new Vector3(posXGenerator, posYGenerator, 0);
+            Quaternion rot = new Quaternion();
+
+            Instantiate(enemyPrefab, pos, rot);
+        }
     }
 }
