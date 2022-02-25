@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class EnemiesController : MonoBehaviour
 {
-    private AudioSource destroySound;
+    //private AudioSource destroySound;
 
     void Start(){
-        destroySound = GetComponent<AudioSource>();
+        //destroySound = GetComponent<AudioSource>();
     }
     private void OnTriggerEnter2D(Collider2D collision){
-        destroySound.Play();
-        //Destroy(gameObject);
+       if (collision.CompareTag("bullet"))
+    {
+        //destroySound.Play();
+        Destroy(gameObject);
+    }
     }
 }

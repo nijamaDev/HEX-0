@@ -678,8 +678,8 @@ GameObject:
   - component: {fileID: 630747890}
   - component: {fileID: 630747889}
   - component: {fileID: 630747893}
-  - component: {fileID: 630747892}
   - component: {fileID: 630747891}
+  - component: {fileID: 630747894}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -811,18 +811,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &630747892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630747888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8d1db8ba70fee74b81e5616c0d24694, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &630747893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -836,6 +824,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1894659543480859158, guid: ed86b158b3a21214691015c246c1bd6d, type: 3}
+--- !u!114 &630747894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630747888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de1fb77331a0f249be1944838a6cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &718338830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,7 +1601,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286605229}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1846d27ac1abcf249a83a12db30ea49c, type: 3}

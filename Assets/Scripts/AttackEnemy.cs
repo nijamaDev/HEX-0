@@ -35,4 +35,10 @@ public class AttackEnemy : MonoBehaviour
 
         rb.AddForce(-(Vector2)transform.up * moveSpeed * Time.deltaTime);
     }
+    private void OnTriggerEnter2D(Collider2D collision){
+       if (collision.CompareTag("bullet"))
+    {
+        Destroy(gameObject);
+    }
+    }
 }

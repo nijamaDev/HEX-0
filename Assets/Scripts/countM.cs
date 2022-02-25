@@ -24,6 +24,10 @@ public class countM : MonoBehaviour
       contador = 0;
     }
 
+    if (collider.CompareTag("Enemy"))
+    {
+      Destroy(gameObject);
+    }
   }
 
   // public void Awake()
