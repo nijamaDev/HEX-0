@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerController : MonoBehaviour
+public class SpawnerEnemy : MonoBehaviour
 {
     float timer;
     public GameObject enemyPrefab;
@@ -17,6 +17,7 @@ public class SpawnerController : MonoBehaviour
             timer = 0;
             float posXGenerator = Random.Range(-3.5f, 3.5f);
             float posYGenerator = Random.Range(-3.5f, 3.5f);
+
             Vector3 pos = new Vector3(posXGenerator, posYGenerator, 0);
             Quaternion rot = new Quaternion();
 
