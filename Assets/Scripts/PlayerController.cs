@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
     lt.intensity = 0.7f + Mathf.PingPong(Time.time / 8, 0.3f);
   }
 
-  private void OnTriggerEnter2D(Collider2D collision){
-    Destroy(gameObject);
-  }
+  //private void OnTriggerEnter2D(Collider2D collision){
+  //  Destroy(gameObject);
+  //}
 }
