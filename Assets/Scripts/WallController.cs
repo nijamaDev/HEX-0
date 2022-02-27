@@ -5,12 +5,12 @@ using TMPro;
 
 public class WallController : MonoBehaviour
 {
-  //public TMP_Text multiplier;
+  public TMP_Text multiplier;
   private void OnTriggerEnter2D(Collider2D col)
   {
     if (col.tag == "bullet")
     {
-      //multiplier.text = "X0";
+      multiplier.text = "X0";
       Destroy(col.gameObject);
     }
   }
