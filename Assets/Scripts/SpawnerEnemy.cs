@@ -20,7 +20,6 @@ public class SpawnerEnemy : MonoBehaviour
 
             Vector3 pos = new Vector3(posXGenerator, posYGenerator, 0);
             Quaternion rot = new Quaternion();
-
             Instantiate(enemyPrefab, pos, rot);
         }
     }
