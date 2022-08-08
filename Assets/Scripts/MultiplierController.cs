@@ -7,27 +7,19 @@ public class MultiplierController : MonoBehaviour
 {
   public TMP_Text text;
   int mult;
-  Rigidbody2D rb;
-
   void Start()
   {
     text = FindObjectOfType<TMP_Text>();
   }
   private void OnTriggerEnter2D(Collider2D col)
   {
-    if (col.tag == "a")
+    if (col.CompareTag("Enemy"))
     {
-
-    }
-    mult = int.Parse(text.text.Remove(0, 1)) + 1;
-    text.text = "X" + mult;
-    if (col.gameObject.name == "Square")
-    {
-      mult = mult + 1;
-      text.text = "x" + mult;
+      mult = int.Parse(text.text.Remove(0, 1)) + 1;
+      text.text = "X" + mult;
       Destroy(col.gameObject);
+      Destroy(gameObject);
     }
-
   }
 
   // public void Awake()
