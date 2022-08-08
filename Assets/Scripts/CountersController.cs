@@ -5,18 +5,20 @@ using TMPro;
 
 public class CountersController : MonoBehaviour
 {
-  public TMP_Text text;
+  public TMP_Text points;
+  public TMP_Text multiplier;
   int mult;
   void Start()
   {
-    text = FindObjectOfType<TMP_Text>();
+    multiplier = FindObjectOfType<TMP_Text>();
+    multiplier = FindObjectOfType<TMP_Text>();
   }
   private void OnTriggerEnter2D(Collider2D col)
   {
     if (col.CompareTag("Enemy"))
     {
-      mult = int.Parse(text.text.Remove(0, 1)) + 1;
-      text.text = "X" + mult;
+      mult = int.Parse(multiplier.text.Remove(0, 1)) + 1;
+      multiplier.text = "X" + mult;
       Destroy(col.gameObject);
       Destroy(gameObject);
     }

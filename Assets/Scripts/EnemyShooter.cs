@@ -12,6 +12,8 @@ public class EnemyShooter : MonoBehaviour
   float impulse;
   Rigidbody2D rb;
   private GameObject player;
+  public GameObject Bullet;
+  float timer;
   // Start is called before the first frame update
   void Start()
   {
@@ -33,5 +35,12 @@ public class EnemyShooter : MonoBehaviour
     rb.AddTorque(impulse, ForceMode2D.Force);
 
     rb.AddForce(-(Vector2)transform.up * moveSpeed * Time.deltaTime);
+    timer += Time.deltaTime;
+
+    if (timer >= 2.5f)
+    {
+      timer = 0;
+      Instantiate(Bullet, gameObject.transform.position, gameObject.transform.rotation);
+    }
   }
 }
