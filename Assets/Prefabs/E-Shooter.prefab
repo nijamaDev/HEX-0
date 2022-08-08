@@ -41,11 +41,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4281121383225648470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0f953125244f1348aa9d6c326c41265, type: 3}
+  m_Script: {fileID: 11500000, guid: 4201886bc9752d943bcfdfde56dc5b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletController: {fileID: 6117114683560830886}
-  Bullet: {fileID: 8644457516526081359, guid: 0aef170f617f8ff4c97bb62630349217, type: 3}
+  velocity: 0
 --- !u!1 &5266371931417511470
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5266371931417511464}
   - component: {fileID: 5266371931417511471}
-  - component: {fileID: 6838978369458386528}
+  - component: {fileID: 4019057160450997397}
   - component: {fileID: 1792155931190405243}
   - component: {fileID: 895645063044852405}
   m_Layer: 0
@@ -75,7 +74,7 @@ Transform:
   m_GameObject: {fileID: 5266371931417511470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6117114683560830886}
@@ -135,7 +134,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6838978369458386528
+--- !u!114 &4019057160450997397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575cec43fe51eed44920c59213e7a546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnSpeed: 500
-  moveSpeed: 500
+  turnSpeed: 0
+  moveSpeed: 0
 --- !u!58 &1792155931190405243
 CircleCollider2D:
   m_ObjectHideFlags: 0
