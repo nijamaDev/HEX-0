@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 250
-  moveSpeed: 2000
+  moveSpeed: 500
   Bullet: {fileID: 8644457516526081359, guid: 0aef170f617f8ff4c97bb62630349217, type: 3}
 --- !u!58 &1792155931190405243
 CircleCollider2D:
@@ -131,7 +131,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 10
   m_LinearDrag: 3
   m_AngularDrag: 10
   m_GravityScale: 1

@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
   [SerializeField] private float velocity;
-  // Start is called before the first frame update
+  float timer = 0;
   void Start()
   {
 
@@ -14,6 +14,11 @@ public class EnemyBullet : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+    timer += Time.deltaTime;
+    if (timer > 4)
+    {
+      Destroy(gameObject);
+    }
     transform.Translate(Vector2.down * velocity * Time.deltaTime);
   }
 

@@ -18,10 +18,10 @@ public class SpawnerController : MonoBehaviour
   {
     if (player == null)
     {
-      Destroy(gameObject);
+      return;
     }
     timer += Time.deltaTime;
-    spawnTimer = 2;
+    spawnTimer = 3.5f;
 
     if (timer > spawnTimer)
     {
@@ -34,21 +34,22 @@ public class SpawnerController : MonoBehaviour
   {
     float posX = Random.Range(-8, 8);
     float posY = Random.Range(-8, 8);
-
+    bool approved = false;
+    GameObject child;
     if (posX >= 4 || posX <= -4)
     {
-      Vector2 pos = new Vector2(posX, posY);
-      Quaternion rot = new Quaternion();
-
-      Instantiate(Enemy, pos, rot);
-
+      approved = true;
     }
     else if (posY >= 4 || posY <= -4)
     {
+      approved = true;
+    }
+    if (approved)
+    {
       Vector2 pos = new Vector2(posX, posY);
       Quaternion rot = new Quaternion();
-
-      Instantiate(Enemy, pos, rot);
+      child = Instantiate(Enemy, pos, rot);
+      child.transform.parent = gameObject.transform;
     }
   }
 }

@@ -26,6 +26,15 @@ public class EnemyShooter : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+    if (player == null)
+    {
+      return;
+    }
+    Move();
+    Shoot();
+  }
+  void Move()
+  {
     // Get world position for the mouse
     playerPosition = player.transform.position;
     // Get the direction of the mouse relative to the player and rotate the player to said direction
@@ -35,8 +44,12 @@ public class EnemyShooter : MonoBehaviour
     rb.AddTorque(impulse, ForceMode2D.Force);
 
     rb.AddForce(-(Vector2)transform.up * moveSpeed * Time.deltaTime);
-    timer += Time.deltaTime;
 
+  }
+
+  void Shoot()
+  {
+    timer += Time.deltaTime;
     if (timer >= 2.5f)
     {
       timer = 0;

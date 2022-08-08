@@ -20,6 +20,21 @@ public class EnemyRunner : MonoBehaviour
   }
   void Update()
   {
+    if (player == null)
+    {
+      return;
+    }
+    Move();
+  }
+  private void OnTriggerEnter2D(Collider2D collision)
+  {
+    if (collision.CompareTag("bullet"))
+    {
+      Destroy(gameObject);
+    }
+  }
+  void Move()
+  {
     playerPosition = player.transform.position;
     direction = playerPosition - (Vector2)transform.position;
     angle = Vector2.SignedAngle(-transform.up, direction);
@@ -27,9 +42,4 @@ public class EnemyRunner : MonoBehaviour
     rb.AddTorque(impulse, ForceMode2D.Force);
     rb.AddForce(-(Vector2)transform.up * moveSpeed * Time.deltaTime);
   }
-  private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.CompareTag("bullet")){
-            Destroy(gameObject);
-        }
-    }
 }
