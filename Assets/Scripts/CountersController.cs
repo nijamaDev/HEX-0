@@ -5,31 +5,30 @@ using TMPro;
 
 public class CountersController : MonoBehaviour
 {
-  public TMP_Text points;
+  public TextMeshPro points;
   public TMP_Text multiplier;
+  int addPoints;
   int mult;
   void Start()
   {
-    multiplier = FindObjectOfType<TMP_Text>();
-    multiplier = FindObjectOfType<TMP_Text>();
+    points = GameObject.Find("Score").GetComponent<TextMeshPro>();
+    multiplier = GameObject.Find("Multiplier").GetComponent<TMP_Text>();
+    Debug.Log(multiplier.text);
+    Debug.Log(points.text);
   }
   private void OnTriggerEnter2D(Collider2D col)
   {
     if (col.CompareTag("Enemy"))
     {
-      mult = int.Parse(multiplier.text.Remove(0, 1)) + 1;
+      mult = int.Parse(multiplier.text.Remove(0, 1));
+      //addPoints = int.Parse(points.text) * mult;
+      mult++;
       multiplier.text = "X" + mult;
+
       Destroy(col.gameObject);
       Destroy(gameObject);
     }
   }
-
-  // public void Awake()
-  // {
-  //   rb = GetComponent<Rigidbody2D>();
-  //   contador = 0;
-  //   multiplier.text = "x" + contador;
-  // }
 }
 
 
