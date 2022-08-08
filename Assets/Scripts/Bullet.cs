@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float velocity;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  [SerializeField] private float velocity;
+  // Start is called before the first frame update
+  void Start()
+  {
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Translate(Vector2.down * velocity * Time.deltaTime);
-    }
+  }
 
-    private void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Player")){
-            Destroy(gameObject);
-        }
+  // Update is called once per frame
+  void Update()
+  {
+    transform.Translate(Vector2.down * velocity * Time.deltaTime);
+  }
+
+  private void OnTriggerEnter2D(Collider2D other)
+  {
+    if (other.CompareTag("Player"))
+    {
+      Destroy(gameObject);
     }
+  }
 }
