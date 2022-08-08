@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackEnemy : MonoBehaviour
+public class EnemyShooter : MonoBehaviour
 {
   public float turnSpeed;
   public float moveSpeed;
@@ -33,5 +33,12 @@ public class AttackEnemy : MonoBehaviour
     rb.AddTorque(impulse, ForceMode2D.Force);
 
     rb.AddForce(-(Vector2)transform.up * moveSpeed * Time.deltaTime);
+  }
+  private void OnTriggerEnter2D(Collider2D collision)
+  {
+    if (collision.CompareTag("bullet"))
+    {
+      Destroy(gameObject);
+    }
   }
 }

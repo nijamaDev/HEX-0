@@ -27,4 +27,9 @@ public class EnemyRunner : MonoBehaviour
     rb.AddTorque(impulse, ForceMode2D.Force);
     rb.AddForce(-(Vector2)transform.up * moveSpeed * Time.deltaTime);
   }
+  private void OnTriggerEnter2D(Collider2D collision){
+        if(collision.CompareTag("bullet")){
+            Destroy(gameObject);
+        }
+    }
 }

@@ -5,16 +5,17 @@ using UnityEngine;
 public class SpawnerController : MonoBehaviour
 {
   float timer;
+  float spawnTimer;
   public GameObject runner;
   public GameObject shooter;
 
 
   void Update()
   {
-    timer = Time.time % 2;
-    Debug.Log(timer);
+    timer += Time.deltaTime;
+    spawnTimer = 2;
 
-    if (timer <= 1)
+    if (timer > spawnTimer)
     {
       timer = 0;
       float posX = Random.Range(-8, 8);

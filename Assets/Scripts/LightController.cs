@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;
 public class LightController : MonoBehaviour
 {
   public Light2D lt1, lt2, lt3, lt4, lt5, lt6;
-  private Light2D[] lts = new Light2D[6];
+  Light2D[] lts = new Light2D[6];
   /**
 Red(255,0,0)
 Magenta(255,0,255)
@@ -15,7 +15,7 @@ cyan(0,255,255)
 Green(0,255,0)
 Yellow(255,255,0)
 */
-  private Color[] colors = {
+  Color[] colors = {
     Color.red,
     Color.magenta,
     Color.blue,
@@ -23,8 +23,9 @@ Yellow(255,255,0)
     Color.green,
     Color.yellow,
     Color.red};
-  private float time;
-  private int stage;
+  float time;
+  float speed;
+  int stage;
   void Start()
   {
     lts[0] = lt1;
@@ -35,12 +36,13 @@ Yellow(255,255,0)
     lts[5] = lt6;
     time = 0;
     stage = 0;
+    speed = 0.8f;
   }
 
   // Update is called once per frame
   void Update()
   {
-    time += 0.5f * Time.deltaTime;
+    time += speed * Time.deltaTime;
     if (time > 1) time = 1;
     for (int i = 0; i < lts.Length; i++) // change the color of all the lights in the HEX
     {

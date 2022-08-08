@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class countM : MonoBehaviour
+public class ConterController : MonoBehaviour
 {
   public TMP_Text multiplier;
   int contador;
